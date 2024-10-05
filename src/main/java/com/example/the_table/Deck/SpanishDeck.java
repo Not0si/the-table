@@ -1,23 +1,23 @@
 package com.example.the_table.Deck;
 
-import com.example.the_table.Card.Card;
-import com.example.the_table.Card.CardSuit;
-import com.example.the_table.Card.CardType;
+
+import com.example.the_table.Card.SpanishCard;
 
 import java.util.ArrayList;
 
-public class SpanishDeck extends Deck {
+public class SpanishDeck extends Deck<SpanishCard> {
 
-    private static ArrayList<ArrayList<Card>> getSpanishDeck() {
-        CardSuit[] suits = CardSuit.values();
-        CardType[] types = CardType.values();
-        ArrayList<Card> initCards = new ArrayList<>(41);
+    private static ArrayList<ArrayList<SpanishCard>> getSpanishDeck() {
+        SpanishCard.SCSuit[] suits = SpanishCard.SCSuit.values();
+        SpanishCard.SCType[] types = SpanishCard.SCType.values();
 
-        ArrayList<ArrayList<Card>> result = new ArrayList<>(2);
+        ArrayList<SpanishCard> initCards = new ArrayList<>(41);
 
-        for (CardSuit suit : suits) {
-            for (CardType type : types) {
-                initCards.add(new Card(suit, type));
+        ArrayList<ArrayList<SpanishCard>> result = new ArrayList<>(2);
+
+        for (SpanishCard.SCSuit suit : suits) {
+            for (SpanishCard.SCType type : types) {
+                initCards.add(new SpanishCard(suit, type));
             }
         }
 
